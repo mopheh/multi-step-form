@@ -91,6 +91,7 @@ p {
 
 ::placeholder {
   text-transform: initial;
+  font-family: "Cabin", sans-serif;
   color: hsla(231, 11%, 63%, 0.85) !important;
   letter-spacing: 0.3px;
   font-weight: 500;
@@ -111,5 +112,74 @@ p {
   border-color: hsl(213, 96%, 18%);
 }
 .hide {
-  display: none
+  display: none;
+}
+.billing .d-flex:first-of-type {
+  justify-content: space-between;
+  font-family: "Cabin", sans-serif;
+}
+.billing-text h5 {
+  font-family: "Cabin", sans-serif;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 0;
+  font-weight: bold;
+}
+.billing-box {
+  border-radius: 12px;
+  cursor: pointer;
+  width: 30%;
+  border: 1px solid hsl(229, 24%, 87%);
+}
+.billing-box span {
+  color: hsl(213, 96%, 18%);
+  font-size: 14px;
+}
+.billed {
+  border-color: hsl(213, 96%, 18%);
+  background-color: hsla(206, 94%, 87%, 0.158);
+}
+.billing-text p {
+  font-family: "Cabin", sans-serif;
+}
+.toggle-billing {
+  font-family: "Cabin", sans-serif;
+  justify-content: center;
+  width: 100%;
+  background-color: hsla(206, 94%, 87%, 0.158);
+  color: hsl(213, 96%, 18%);
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 12px 15px;
+  text-align: center;
+}
+.toggle {
+  width: 35px;
+  border-radius: 50px;
+  height: 20px;
+  margin: 0 0.825rem;
+  background-color: hsl(213, 96%, 18%);
+}
+.grayscale {
+  color: hsl(231, 11%, 63%);
+}
+.circle {
+  width: 12px;
+  margin: 4px;
+  height: 12px;
+  margin-left: auto;
+  background-color: #fff;
+  border-radius: 50px;
+}
+.to-step1 {
+  font-family: "Cabin", sans-serif;
+}
+@media (max-width: 1200px) {
+  .form-body {
+    width: 85%;
+  }
+}
+@media (max-width: 1000px) {
+  .p-5 {
+    padding: 2rem !important;
+  }
 }
