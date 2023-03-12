@@ -79,11 +79,15 @@ p {
 .form-control {
   padding: 0.625rem 0.875rem;
   color: hsl(213, 96%, 18%);
-  font-size: 16px;
+  font-size: 15px;
+  font-family: "Space Grotesk", "Cabin", sans-serif;
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 500;
 }
-
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+  box-shadow: none;
+}
 .form-control:focus {
   box-shadow: none;
   border-color: hsl(213, 96%, 18%);
@@ -97,6 +101,14 @@ p {
   font-weight: 500;
 }
 
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: none;
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid:focus {
+  box-shadow: none;
+}
 .submit {
   background-color: hsl(213, 96%, 18%);
   width: 30%;
@@ -130,6 +142,9 @@ p {
   width: 30%;
   border: 1px solid hsl(229, 24%, 87%);
 }
+.billing-box:hover {
+  border-color: hsl(213, 96%, 18%);
+}
 .billing-box span {
   color: hsl(213, 96%, 18%);
   font-size: 14px;
@@ -154,6 +169,7 @@ p {
 }
 .toggle {
   width: 35px;
+  cursor: pointer;
   border-radius: 50px;
   height: 20px;
   margin: 0 0.825rem;
@@ -166,12 +182,20 @@ p {
   width: 12px;
   margin: 4px;
   height: 12px;
-  margin-left: auto;
+  transition: all ease-in-out 6ms;
+  margin-left: 12%;
   background-color: #fff;
   border-radius: 50px;
 }
 .to-step1 {
   font-family: "Cabin", sans-serif;
+}
+.to-step1:hover {
+  color: hsl(213, 96%, 18%);
+}
+.billing-image,
+.billing-text {
+  user-select: none;
 }
 @media (max-width: 1200px) {
   .form-body {
@@ -182,4 +206,16 @@ p {
   .p-5 {
     padding: 2rem !important;
   }
+}
+.toggle-year {
+  margin-left: auto !important;
+}
+.invalid-feedback {
+  font-size: 14px !important;
+  width: initial;
+  color: hsl(354, 84%, 57%) !important;
+  position: absolute;
+  font-family: "Cabin", sans-serif;
+  right: 2%;
+  top: 0;
 }
