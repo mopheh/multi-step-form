@@ -1,3 +1,6 @@
+let onlinePricing = document.querySelector(".online-pricing")
+let largerPricing = document.querySelector(".larger-pricing")
+let customPricing = document.querySelector(".custom-pricing")
 document.querySelectorAll(".digit").forEach((item) => {
   item.addEventListener("click", (e) => {
     const { id } = e.target
@@ -24,6 +27,20 @@ const setSteps = (step) => {
   changeSteps(step)
 }
 
+const saveToStorage = () => {
+  let id = document.querySelector(".billing-box.billed").attributes.id.value
+  let pricing = document
+    .getElementById(id)
+    .children[1].classList.contains("hide")
+    ? document.getElementById(id).children[2].children[1].innerText
+    : document.getElementById(id).children[1].children[1].innerText
+  let interval = pricing.slice(-2) === "mo" ? "monthly" : "yearly"
+  onlinePricing.innerText = interval === "monthly" ? "+$1/mo" : "+$10/yr"
+  largerPricing.innerText = interval === "monthly" ? "+$2/mo" : "+$20/yr"
+  customPricing.innerText = interval === "monthly" ? "+$2/mo" : "+$20/yr"
+  localStorage.setItem("Plan", JSON.stringify({ id, pricing, interval }))
+}
+
 document.querySelectorAll(".billing-box").forEach((item) => {
   item.addEventListener("click", (e) => {
     const { id } = e.target
@@ -31,6 +48,16 @@ document.querySelectorAll(".billing-box").forEach((item) => {
       item.classList.remove("billed")
     })
     document.getElementById(id).classList.add("billed")
+    saveToStorage()
+  })
+})
+document.querySelectorAll(".online-service").forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const { id } = e.target
+    e.target.classList.toggle("billed")
+    document.getElementById(id.slice(0, -3)).checked = !document.getElementById(
+      id.slice(0, -3)
+    ).checked
   })
 })
 
@@ -59,6 +86,7 @@ const setBilling = () => {
     document.querySelector(".monthly").classList.add("grayscale")
     document.querySelector(".yearly").classList.remove("grayscale")
   }
+  saveToStorage()
 }
 var form = document.querySelector("form")
 document.querySelector("form").addEventListener(

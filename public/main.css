@@ -223,9 +223,7 @@ input[type="checkbox"] {
   border-radius: 8px;
   width: 20px;
   height: 20px;
-}
-input[type="checkbox"]:checked {
-  color: hsl(243, 100%, 62%);
+  accent-color: hsl(243, 100%, 62%);
 }
 .marine-blue {
   color: hsl(213, 96%, 18%);
@@ -253,4 +251,10 @@ input[type="checkbox"]:checked {
 }
 .online-ad-info h5 {
   font-size: 1.1rem;
+}
+.mr-1 {
+  margin-right: 1rem;
+}
+.pt-none {
+  pointer-events: none;
 }
