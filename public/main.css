@@ -258,3 +258,44 @@ input[type="checkbox"] {
 .pt-none {
   pointer-events: none;
 }
+.summary {
+  background-color: hsla(206, 94%, 87%, 0.288);
+  font-family: "Cabin";
+}
+.ad-on {
+  font-weight: 600;
+}
+.price {
+  color: hsl(213, 96%, 18%) !important;
+  font-weight: 500;
+}
+.summary h5 {
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+.change {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.change:hover {
+  color: hsl(243, 100%, 62%) !important;
+}
+.ad-on-price {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+.total {
+  font-family: "Cabin";
+}
+#total-btn:hover {
+  background-color: hsl(243, 100%, 62%);
+  border-color: hsl(243, 100%, 62%);
+}
+.final {
+  font-family: "Cabin" !important;
+  margin: 6rem auto;
+}
+.final h1 {
+  font-family: "Ubuntu" !important;
+}

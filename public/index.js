@@ -23,8 +23,46 @@ const setActiveButton = (id) => {
 }
 
 const setSteps = (step) => {
-  setActiveButton(step)
+  if (step !== "final") {
+    setActiveButton(step)
+  }
   changeSteps(step)
+  document.querySelector(".plan-price h5").innerText = `${
+    JSON.parse(localStorage.getItem("Plan")).id
+  }(${JSON.parse(localStorage.getItem("Plan")).interval})`
+  document.querySelector(".summary .pricing").innerText = `${
+    JSON.parse(localStorage.getItem("Plan")).pricing
+  }`
+  if (step === "step4") {
+    document.querySelectorAll(".online-service").forEach((item) => {
+      if (item.classList.contains("billed")) {
+        var div = document.createElement("div")
+        div.classList.add("ad-on-price")
+        div.innerHTML = `<p class=""grayscale ad-on"">${item.children[0].children[1].children[0].innerText}</p> <p class="price">${item.children[1].innerText}</p>`
+        document.querySelector(".summary").children[2].appendChild(div)
+      }
+    })
+    if (
+      document.querySelector(".summary .pricing").innerText.slice(-2) === "yr"
+    ) {
+      document.querySelector(".total-bill").innerText = "Total (per year)"
+    } else {
+      document.querySelector(".total-bill").innerText = "Total (per month)"
+    }
+    var planPrice = Number(
+      document
+        .querySelector(".summary .pricing")
+        .innerText.replace(/[^0-9]/g, "")
+    )
+    document.querySelectorAll(".summary .price").forEach((item) => {
+      planPrice += Number(item.innerText.replace(/[^0-9]/g, ""))
+    })
+    document.querySelector(".total-value").innerText = `$${planPrice}${document
+      .querySelector(".summary .pricing")
+      .innerText.slice(-2)}`
+  } else {
+    document.querySelector(".summary").children[2].innerHTML = ""
+  }
 }
 
 const saveToStorage = () => {
@@ -74,6 +112,7 @@ const setBilling = () => {
     document.querySelectorAll(".yearly-billing").forEach((item) => {
       item.classList.add("hide")
     })
+    document.querySelector(".total-bill").innerText = "Total(per month)"
     document.querySelector(".monthly").classList.remove("grayscale")
     document.querySelector(".yearly").classList.add("grayscale")
   } else {
@@ -85,6 +124,7 @@ const setBilling = () => {
     })
     document.querySelector(".monthly").classList.add("grayscale")
     document.querySelector(".yearly").classList.remove("grayscale")
+    document.querySelector(".total-bill").innerText = "Total(per year)"
   }
   saveToStorage()
 }

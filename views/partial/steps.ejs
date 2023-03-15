@@ -178,4 +178,41 @@
 <div class="p-5 steps-value step4 hide">
   <h1>Finishing up</h1>
   <p class="mb-4">Double-check everything looks OK before confirming.</p>
+  <div class="summary p-4 mt-2 rounded">
+    <div class="d-flex align-items-center justify-content-between">
+      <div class="plan-price">
+        <h5 class="text-capitalize">Arcade(Monthly)</h5>
+        <span class="change grayscale" onclick="setSteps('step2')">Change</span>
+      </div>
+      <h5 class="pricing">+$1/mo</h5>
+    </div>
+    <hr />
+    <div></div>
+  </div>
+  <div class="total d-flex justify-content-between px-4 mt-4">
+    <h6 class="grayscale total-bill"></h6>
+    <h5 class="total-value purplish-blue f-700"></h5>
+  </div>
+  <div class="d-flex justify-content-between mt-5 align-items-center">
+    <p class="grayscale to-step1 btn" onclick="setSteps('step2')">Go Back</p>
+    <button
+      class="btn btn-primary submit"
+      type="submit"
+      onclick="setSteps('final')"
+      id="total-btn"
+    >
+      Confirm
+    </button>
+  </div>
+</div>
+<div class="p-5 steps-value final hide">
+  <div class="d-flex flex-column align-items-center">
+    <img src="/images/icon-thank-you.svg" alt="check-pics" />
+    <h1 class="my-3 f-700">Thank You!</h2>
+    <p class="text-center my-2">
+      Thanks for confirming your subscription! We hope you have fun using our
+      platform. If you ever need support, please feel free to email us at
+      support@loremgaming.com.
+    </p>
+  </div>
 </div>
