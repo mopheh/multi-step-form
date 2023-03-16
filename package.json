@@ -5,7 +5,7 @@
   "description": "![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server"
   },
   "keywords": [],
   "author": "",
