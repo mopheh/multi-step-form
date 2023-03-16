@@ -11,6 +11,9 @@ body {
   border-radius: 12px;
   background-color: hsl(0, 0%, 100%);
 }
+.f-sub {
+  text-align: end;
+}
 .sidebar {
   height: 100%;
   width: 30%;
