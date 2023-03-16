@@ -38,14 +38,17 @@
       />
       <p class="invalid-feedback text-red">This field is required</p>
     </div>
-    <button class="btn btn-primary submit mt-5" type="submit">Next Step</button>
+    <div class="f-sub">
+
+      <button class="btn btn-primary submit mt-5" type="submit">Next Step</button>
+    </div>
   </form>
 </div>
 <div class="p-5 steps-value step2 hide">
   <h1>Select your plan</h1>
   <p class="mb-4">You have the option of monthly or yearly billing.</p>
   <div class="billing">
-    <div class="mt-5 d-flex">
+    <div class="mt-5 d-md-flex">
       <div class="billing-box billed p-3" id="arcade">
         <div class="billing-image mb-5 pt-none">
           <img src="/images/icon-arcade.svg" alt="arcade" />
@@ -96,7 +99,7 @@
       </div>
       <span class="yearly grayscale">Yearly</span>
     </div>
-    <div class="d-flex justify-content-between mt-5 align-items-center">
+    <div class="d-flex btn-nav justify-content-between mt-5 align-items-center">
       <p class="grayscale to-step1 btn" onclick="setSteps('step1')">Go Back</p>
       <button
         class="btn btn-primary submit"
@@ -163,7 +166,7 @@
         >+$2/mo</span
       >
     </div>
-    <div class="d-flex justify-content-between mt-5 align-items-center">
+    <div class="d-flex btn-nav justify-content-between mt-5 align-items-center">
       <p class="grayscale to-step1 btn" onclick="setSteps('step2')">Go Back</p>
       <button
         class="btn btn-primary submit"
@@ -193,7 +196,7 @@
     <h6 class="grayscale total-bill"></h6>
     <h5 class="total-value purplish-blue f-700"></h5>
   </div>
-  <div class="d-flex justify-content-between mt-5 align-items-center">
+  <div class="d-flex btn-nav justify-content-between mt-5 align-items-center">
     <p class="grayscale to-step1 btn" onclick="setSteps('step2')">Go Back</p>
     <button
       class="btn btn-primary submit"

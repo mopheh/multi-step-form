@@ -199,14 +199,118 @@ p {
 }
 @media (max-width: 1200px) {
   .form-body {
-    width: 85%;
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  .steps .text-white {
+    font-size: 13px;
+  }
+  p {
+    font-size: 12px;
   }
 }
 @media (max-width: 1000px) {
   .p-5 {
     padding: 2rem !important;
   }
+  .sidebar {
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+  }
 }
+@media (max-width: 769px) {
+  .form-body {
+    margin: 0;
+    width: 100%;
+    background-color: inherit;
+  }
+  .steps {
+    display: flex;
+    justify-content: center;
+  }
+  .left-bar {
+    width: 100%;
+  }
+  .f-sub {
+    text-align: end;
+  }
+  .f-sub,
+  .btn-nav {
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+  }
+  .f-sub .mt-5 {
+    margin-top: 0 !important;
+  }
+  .f-sub,
+  .btn-nav {
+    padding: 1rem;
+  }
+  .steps p {
+    display: none;
+  }
+  .steps .text-white {
+    font-size: 12px;
+  }
+  .steps-value {
+    border-radius: 12px;
+    position: relative;
+    top: -5rem;
+    background-color: #fff;
+  }
+  p {
+    font-size: 10px;
+  }
+  .sidebar {
+    width: 100%;
+    height: 30%;
+    border-radius: 0;
+    background-image: url("/images/bg-sidebar-mobile.svg");
+  }
+  .billing-box {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.875rem;
+  }
+  .billing .mt-5 {
+    margin-top: 2rem !important;
+  }
+  .billing-box .mb-5 {
+    margin-bottom: 0 !important;
+    margin-right: 1rem;
+  }
+  .final {
+    margin: auto !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .steps-value {
+    padding-bottom: 1rem !important;
+  }
+  .online-service {
+    padding: 1rem !important;
+  }
+  .left-bar h1 {
+    font-size: 2rem;
+  }
+  .left-bar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .left-bar p {
+    font-size: 15px;
+  }
+  .submit {
+    width: 35%;
+  }
+}
+
 .toggle-year {
   margin-left: auto !important;
 }

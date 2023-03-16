@@ -26,6 +26,9 @@ const setSteps = (step) => {
   if (step !== "final") {
     setActiveButton(step)
   }
+  if (step === "step3") {
+    saveToStorage()
+  }
   changeSteps(step)
   document.querySelector(".plan-price h5").innerText = `${
     JSON.parse(localStorage.getItem("Plan")).id
